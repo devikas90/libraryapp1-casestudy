@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title><%=title%></title></title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="css/styles.css" rel="stylesheet">
+
+
+    <style>
+       body{
+           background-size: cover;
+       }
+        .d1{
+
+            border: 2px solid rgb(19, 3, 80);
+            background-color: #f56726b9;
+            margin:90px;
+            padding: 3px;
+            margin-right: 33%;
+            margin-left: 33%;
+            padding: 10px;
+            margin-top: 2%;
+        }
+        
+                
+  input[type=submit] {
+     background-color: #04AA6D;
+                 color: white;
+                 padding: 12px;
+                 border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                 float: center;
+                        }
+
+input[type=submit]:hover {
+  background-color: #388cda;
+}
+             .row:after {
+                 content: "";
+                 display: table;
+                    clear: both;
+                  }
+                  h2 {
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+.uname{
+    color: rgb(246, 240, 255);
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+h1 {
+  color: rgb(236, 232, 240);
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  margin-top:3%;
+}
+
+
+    </style>
+   
+
+</head>
+    
+     
+    
+    
+    <body><header class="navbar navbar-bright navbar-fixed-top" role="banner">
+        <div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">Home</a>
+        </div>
+        <nav class="collapse navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href=<%=data[2].link%>><%=data[2].name%></a>
+             
+               </li>
+               <li>
+                <a href=<%=data[3].link%>><%=data[3].name%></a>
+             
+               </li>
+                
+              </ul>
+            <ul class="nav navbar-right navbar-nav">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
+                  <ul class="dropdown-menu" style="padding:12px;">
+                    <form class="form-inline">
+                      <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
+                    </form>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        
+        <div id="masthead">  
+          <div class="container">
+            <div class="row">
+              <div class="col-md-7">
+                <h1>Sign In</h1>
+                  <p class="lead"></p>
+                </h1>
+              </div>
+              <div class="col-md-5">
+                <div class="well well-lg"> 
+                  <div class="row">
+                    <div class="col-sm-12">
+                      
+                    
+
+
+
+
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div><!-- /cont --> 
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="top-spacer"> </div>
+              </div>
+            </div> 
+          </div><!-- /cont -->
+          
+        </div>
+        
+        
+        <div class="container">
+          <div class="row">
+            
+            <div class="col-md-12"> 
+              
+              <div class="panel">
+                <div class="panel-body">
+                  
+                  
+                  
+          <center><h1></h1></center>   
+          <div class="d1">
+              <center><h2 >Login</h2></center><br>
+          
+              <form action="/usersignin/check" onsubmit="return validate()" id="form1" method="post" >  
+              
+                  <div id="uname" class="col-25">
+                      <label for="uname" class="s1" id="uname"><h4>Email id</h4></label>
+                      <input type="text" class="s2" id="uid" placeholder="Enter emailid" name="email" onkeyup="uidCheck()">
+                       <label id="emaillabel"></label><br><br>
+                </div>
+                <div class="col-25" >
+                  <label for="uname" class="s1">Password</label>&nbsp;&nbsp;&nbsp;
+                  <input type="password"  class="s2" id="pwd" name="password" placeholder="Enter Password" onkeyup="pwdCheck()">
+                  <label id="pwdlabel"></label>
+           <!-- <label for="pwd">Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            
+              <input type="password" id="pwd" name="pwd" placeholder="Enter Password">
+                -->
+              <br></div>
+              <br>
+              <div class="row">
+                 <center> <button type="submit" class="btn">Login</button></center>
+                 <input type="button" value="" id="login-button" >
+                </div>
+               <b> <label >New User???<a href="<%=data[3].link%>"><b>Sign Up</a></label></b>
+          </form>
+      </div>
+      <script>
+      
+//   let uid = document.getElementById("uid");
+//   let pwd = document.getElementById("pwd");
+//   let emaillabel = document.getElementById("emaillabel");
+//   let pwdlabel = document.getElementById("pwdlabel");
+  
+  
+  
+var useremail = document.getElementById('uid');
+var pwd = document.getElementById('pwd');
+var form = document.getElementById('form1');
+var button = document.getElementById('login-button');
+var errorLabel =  document.getElementById("pwdlabel");
+var flag_e = 0;
+var flag_p = 0;
+
+// var email = /^([A-Za-z0-9\.\-\_]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3}?)$/;
+var email = /^([a-zA-Z0-9_\.\-]+)@([a-zA-Z0-9\-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
+var password = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+useremail.addEventListener('input', function validate_email()
+{
+        if(email.test(useremail.value))
+        {
+            useremail.style.color = "green";
+            errorLabel.innerHTML = "Email is valid!!"
+            errorLabel.style.color = "green"
+            errorLabel.removeAttribute("hidden",true);
+            flag_e = 1;
+            enable();
+        }
+        else
+        {
+            useremail.style.color = "red";
+                errorLabel.innerHTML = "Enter valid credentials!!"
+                errorLabel.style.color = "red"
+                errorLabel.removeAttribute("hidden",true);
+            flag_e = 0;
+            disable();
+        }
+});
+
+pwd.addEventListener('input', function validate_pwd()
+{
+    if(password.test(pwd.value))
+        {
+            pwd.style.color = "green";
+            errorLabel.innerHTML = "password is valid!!"
+            errorLabel.style.color = "green"
+            errorLabel.removeAttribute("hidden",true);
+            flag_p = 1;
+            enable();
+        }
+        else
+        {
+            pwd.style.color = "red";
+            errorLabel.innerHTML = "Enter valid password!!"
+            errorLabel.style.color = "red"
+            errorLabel.removeAttribute("hidden",true);
+            flag_p = 0;
+            disable();
+        }
+});    
+
+function enable(){
+    if(flag_e == 1 && flag_p == 1)
+            {
+                button.disabled = false;
+                form.setAttribute('action','/signin/check');
+               
+            }        
+}
+
+
+function disable(){
+    if(flag_e == 0 || flag_e == 0)
+            {
+                button.disabled = true;
+                
+            }        
+}
+
+
+
+          
+
+    </script>
+                  <!--/stories-->
+        
+        
+        
+                  <div class="row">    
+                    <br>
+                    <div class="col-md-2 col-sm-3 text-center">
+                      <a class="story-title" href="#"><img alt="" src="" style="width:100px;height:100px" class="img-circle"></a>
+                    </div>
+
+
+
+                    <hr>
+                    <!--/stories-->
+                    
+<div class="row">    
+    <br>
+    <div class="col-md-2 col-sm-3 text-center">
+    
+    </div>
+    <div class="col-md-10 col-sm-9">
+     
+      <div class="row">
+        <div class="col-xs-9">
+          <h4><span class="label label-default"></span></h4><h4>
+          <small style="font-family:courier,'new courier';" class="text-muted">
+             </small>
+          </h4></div>
+        <div class="col-xs-3"></div>
+      </div>
+      <br><br>
+    </div>
+  </div>
+   
+  
+  <hr>
+  <!--/stories-->
+
+
+
+
+
+                    
+                    
+                    <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
+                  
+                    
+                  </div>
+                </div>
+                                                                                                 
+                                                              
+                                                                
+                 </div><!--/col-12-->
+            </div>
+          </div>
+                                                          
+                                                                                          
+          <hr>
+          
+          <div class="container" id="footer">
+            <div class="row">
+
+
+
+
+
+
+
+                
+              <div class="col col-sm-12">
+
+
+
+
+                
+                
+                <h1>Follow Us</h1>
+                <div class="btn-group">
+                 <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+                 <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+                 <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          
+          <hr>
+          
+          <hr>
+          
+          <footer>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6">
+                  <ul class="list-inline">
+                    <li><i class="icon-facebook icon-2x"></i></li>
+                    <li><i class="icon-twitter icon-2x"></i></li>
+                    <li><i class="icon-google-plus icon-2x"></i></li>
+                    <li><i class="icon-pinterest icon-2x"></i></li>
+                  </ul>
+                  
+                </div>
+                <div class="col-sm-6">
+                    <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
+                </div>
+              </div>
+            </div>
+          </footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+		
+    </body>
+    </html>

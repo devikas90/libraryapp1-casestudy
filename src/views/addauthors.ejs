@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Add Authors</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="css/styles.css" rel="stylesheet">
+
+
+    <style>
+       body{
+           background-size: cover;
+       }
+        .d1{
+
+            border: 2px solid rgb(19, 3, 80);
+            background-color: #030303b9;
+            margin:90px;
+            padding: 3px;
+            margin-right: 33%;
+            margin-left: 33%;
+            padding: 10px;
+            margin-top: 2%;
+        }
+        
+                
+  input[type=submit] {
+     background-color: #04AA6D;
+                 color: white;
+                 padding: 12px;
+                 border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                 float: center;
+                        }
+
+input[type=submit]:hover {
+  background-color: #388cda;
+}
+             .row:after {
+                 content: "";
+                 display: table;
+                    clear: both;
+                  }
+                  h2 {
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+.uname{
+    color: rgb(246, 240, 255);
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+h1 {
+  color: rgb(214, 6, 6);
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  margin-top:3%;
+}
+
+.center {
+  margin: auto;
+  width: 40%;
+  border: 3px solid #320370;
+  padding: 10px;
+}
+
+    </style>
+   
+</head>
+    
+    
+    <body><header class="navbar navbar-bright navbar-fixed-top" role="banner">
+        <div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">Home</a>
+        </div>
+        <nav class="collapse navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+               
+                <li>
+                    <a href=<%=data[0].link%>><%=data[0].name%></a>
+                  </li>
+                  <li>
+                    <a href=<%=data[1].link%>><%=data[1].name%></a>
+                  </li>
+                  <li>
+                    <a href=<%=data[4].link%>><%=data[4].name%></a>
+                 
+                   </li>
+                   <li>
+                    <a href=<%=data[5].link%>><%=data[5].name%></a>
+                  </li>
+                  
+          
+          
+                
+                </ul>
+                
+              </ul>
+            <ul class="nav navbar-right navbar-nav">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
+                  <ul class="dropdown-menu" style="padding:12px;">
+                    <form class="form-inline">
+                      <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
+                    </form>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        
+        <div id="masthead">  
+          <div class="container">
+            <div class="row">
+              <div class="col-md-7">
+                <h1>Add Authors</h1>
+                  <p class="lead"></p>
+                </h1>
+              </div>
+              <div class="col-md-5">
+                <div class="well well-lg"> 
+                  <div class="row">
+                    <div class="col-sm-12">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div><!-- /cont --> 
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="top-spacer"> </div>
+              </div>
+            </div> 
+          </div><!-- /cont -->
+          
+        </div>
+        
+        
+        <div class="container">
+          <div class="row">
+            
+            <div class="col-md-12"> 
+              
+              <div class="panel">
+                <div class="panel-body">
+                 
+                  
+          <div class="center">
+            <h1><u>Authors can be added</u></h1><br>
+              <form method="POST" action="/addauthors/add" enctype="multipart/form-data">
+                    <label>Author Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" for="authorname" placeholder="Enter book name" name="title" required><br>
+                    <label>Catagory</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   
+                    &nbsp;&nbsp;
+                    <input type="text" for="catagoryOfBook" placeholder="Enter Author catagory" name="author" required><br>
+                    <br>
+                    <label>Awards & Honours</label>&nbsp;&nbsp;
+                    <input type="text" for="awards" placeholder="Enter Honors&Awards" name="genre" required><br>
+                    <!--<label>Important Works</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" for="imp:Works" placeholder="Enter his/her work " name="impwork" required><br>-->
+                      <label>Upload Photo</label>
+                      <input type="file"
+                        name="image"
+                      accept="image/png, image/jpeg"required ><br>
+                      
+                   <center> <button type="submit">Add</button></center>
+                    
+              </form>
+          </div>
+            
+            
+                    
+<div class="row">    
+    <br>
+    <div class="col-md-2 col-sm-3 text-center">
+    
+    </div>
+    <div class="col-md-10 col-sm-9">
+     
+      <div class="row">
+        <div class="col-xs-9">
+          <h4><span class="label label-default"></span></h4><h4>
+          <small style="font-family:courier,'new courier';" class="text-muted">
+             </small>
+          </h4></div>
+        <div class="col-xs-3"></div>
+      </div>
+      <br><br>
+    </div>
+  </div>
+   
+  
+  <hr>
+  <!--/stories-->
+                    <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
+                  
+                    
+                  </div>
+                </div>                                       
+                                                                
+                 </div><!--/col-12-->
+            </div>
+          </div>
+                                                          
+                                                                                          
+          <hr>
+          
+          <div class="container" id="footer">
+            <div class="row"> 
+              <div class="col col-sm-12">
+                
+                <h1>Follow Us</h1>
+                <div class="btn-group">
+                 <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+                 <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+                 <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          
+          <hr>
+          
+          <hr>
+          
+          <footer>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6">
+                  <ul class="list-inline">
+                    <li><i class="icon-facebook icon-2x"></i></li>
+                    <li><i class="icon-twitter icon-2x"></i></li>
+                    <li><i class="icon-google-plus icon-2x"></i></li>
+                    <li><i class="icon-pinterest icon-2x"></i></li>
+                  </ul>
+                  
+                </div>
+                <div class="col-sm-6">
+                    <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
+                </div>
+              </div>
+            </div>
+          </footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+		
+    </body>
+    </html>
